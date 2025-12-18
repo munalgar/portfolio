@@ -52,7 +52,8 @@ export default function Home() {
     title: string;
     description: string;
     tech: string[];
-    url: string;
+    url?: string;
+    links?: { text: string; url: string }[];
     featured: boolean;
     highlights?: string[];
   }
@@ -70,7 +71,17 @@ export default function Home() {
         "Zustand",
         "TypeScript",
       ],
-      url: "https://github.com/munalgar/poobel",
+      links: [
+        {
+          text: "Dispatch Dashboard",
+          url: "https://poobel-web-dispatch.vercel.app/",
+        },
+        {
+          text: "Customer Portal",
+          url: "https://poobel-web-customer.vercel.app/",
+        },
+        { text: "GitHub", url: "https://github.com/munalgar/poobel" },
+      ],
       featured: true,
       highlights: [
         "Developed cross-platform mobile applications using React Native with Expo",
@@ -307,11 +318,8 @@ export default function Home() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
-            <a
+            <div
               key={project.title}
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
               className={`group relative overflow-hidden rounded-2xl border p-8 shadow-sm transition-all hover:shadow-xl ${
                 project.featured
                   ? "border-blue-200 bg-gradient-to-br from-blue-50 to-purple-50 dark:border-blue-900 dark:from-blue-950 dark:to-purple-950 md:col-span-2"
@@ -364,24 +372,58 @@ export default function Home() {
                   ))}
                 </div>
 
-                <div className="mt-6 flex items-center text-sm font-medium text-zinc-900 dark:text-zinc-50">
-                  View project
-                  <svg
-                    className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                <div className="mt-6 flex flex-wrap gap-4">
+                  {project.links ? (
+                    project.links.map((link) => (
+                      <a
+                        key={link.text}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-sm font-medium text-zinc-900 hover:text-blue-600 dark:text-zinc-50 dark:hover:text-blue-400"
+                      >
+                        {link.text}
+                        <svg
+                          className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </a>
+                    ))
+                  ) : (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-sm font-medium text-zinc-900 hover:text-blue-600 dark:text-zinc-50 dark:hover:text-blue-400"
+                    >
+                      View project
+                      <svg
+                        className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </section>
