@@ -142,7 +142,7 @@ export default function Home() {
     { name: "Tailwind CSS", category: "Library", level: "Advanced" },
     { name: "AWS", category: "Cloud", level: "Intermediate" },
     { name: "PostgreSQL", category: "Database", level: "Intermediate" },
-    { name: "Docker", category: "DevOps", level: "Intermediate" },
+    { name: "Docker", category: "DevOps", level: "Beginner" },
     { name: "Turborepo", category: "DevOps", level: "Intermediate" },
   ];
 
