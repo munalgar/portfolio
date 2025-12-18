@@ -136,6 +136,7 @@ export default function Home() {
     { name: "React Native", category: "Framework", level: "Intermediate" },
     { name: "Next.js", category: "Framework", level: "Advanced" },
     { name: "Expo", category: "Framework", level: "Intermediate" },
+    { name: "Electron", category: "Framework", level: "Intermediate" },
     { name: "Node.js", category: "Runtime", level: "Advanced" },
     { name: "Zustand", category: "Library", level: "Intermediate" },
     { name: "Tailwind CSS", category: "Library", level: "Advanced" },
