@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
@@ -19,9 +18,10 @@ export default function Home() {
       period: "Oct 2025 - Present",
       location: "Remote",
       achievements: [
-        "Led full-stack development of MVPs, including DeLong safety management, Brainzee, and Poobel dispatch/driver/customer system",
-        "Lead architecture decision-making and assign development tasks",
-        "Pitched and demonstrated two MVPs to Union County College and DeLong",
+        "Lead the pivot of SOL from a single-product EdTech platform into a software and AI development company",
+        "Oversee development of custom full-stack web and mobile applications for clients using modern frameworks and cloud services",
+        "Build scalable RAG (Retrieval-Augmented Generation) pipelines integrating structured data, documents, and embeddings to power reliable, production-grade AI assistants",
+        "Mentor and guide engineers, providing hands-on technical leadership, code reviews, and architectural direction",
       ],
     },
     {
@@ -33,7 +33,7 @@ export default function Home() {
         "Evaluate and debug complex code snippets in TypeScript, JavaScript, and Python",
         "Analyze AI outputs, identifying, correcting, and documenting unsafe/unhelpful/false responses",
         "Review other engineers' work, ensuring it adheres to project guidelines",
-        "Develop boilerplate code for developing a website according to project specifications",
+        "Build websites where the technology stack is predefined per project, implementing features and UI according to pre-defined frameworks and architectural constraints",
       ],
     },
     {
@@ -42,8 +42,9 @@ export default function Home() {
       period: "Feb 2020 - Feb 2025",
       location: "Remote",
       achievements: [
-        "Verified the accuracy of complex Calculus derivations and step-by-step solutions, ensuring correct mathematical logic and LaTeX formatting",
-        "Evaluated Spanish model responses to ensure grammatical accuracy and correct syntax",
+        "Trained and evaluated large language models across multilingual, technical, and reasoning-heavy domains, including Spanish language tasks, software code, and mathematics",
+        "Performed agentic workflow simulations, guiding AI through real-world multi-step tasks such as online shopping, vacation planning, and web-based research",
+        "Evaluate AI reasoning on multi-step problem solving, ensuring clear reasoning and correct final outputs",
       ],
     },
   ];
@@ -62,7 +63,7 @@ export default function Home() {
     {
       title: "Poobel - Waste Collection Management System",
       description:
-        "A comprehensive waste collection management system featuring a monorepo architecture with Next.js web dashboards and React Native (Expo) mobile apps.",
+        "Multi-role driver–dispatch–customer platform in a Turborepo using Next.js (web) and Expo React Native (mobile) for connecting dispatchers, drivers, and customers",
       tech: [
         "React Native",
         "Expo",
@@ -83,67 +84,62 @@ export default function Home() {
         { text: "GitHub", url: "https://github.com/munalgar/poobel" },
       ],
       featured: true,
-      highlights: [
-        "Developed cross-platform mobile applications using React Native with Expo",
-        "Managed a complex monorepo architecture using Turborepo for efficient build and code sharing",
-        "Implemented shared state management across web and mobile apps using Zustand",
-        "Designed a cohesive design system and UI/UX for both web and mobile platforms",
-        "Simulated real-time features like fleet tracking and notifications",
-      ],
     },
     {
       title: "DeLong Safety Management",
       description:
-        "Safety management platform featuring incident tracking, AI-powered root-cause analysis, interactive training modules, and a chat interface",
-      tech: ["Next.js", "TypeScript", "Python", "AI"],
+        "Supervisor and employee safety management platform with incident tracking, certification tracking, employee profiles, and an AI chat interface with RAG (Retrieval-Augmented Generation) capabilities",
+      tech: ["Next.js", "TypeScript"],
       url: "https://github.com/munalgar/delong",
       featured: false,
     },
     {
-      title: "imgtopdf",
-      description:
-        "Efficient image to PDF conversion tool with batch processing capabilities",
-      tech: ["TypeScript", "Node.js"],
+      title: "Imgtopdf",
+      description: "Image to PDF conversion desktop application",
+      tech: ["Electron", "TypeScript", "Pdf-lib", "Sharp"],
       url: "https://github.com/munalgar/imgtopdf",
       featured: false,
     },
     {
-      title: "scribe",
-      description:
-        "Advanced text processing and transcription application with NLP capabilities",
-      tech: ["Python", "NLP"],
+      title: "Scribe",
+      description: "Audio to text transcription desktop application",
+      tech: ["Flutter", "Dart", "Python", "Faster-Whisper", "FFMPEG", "gRPC"],
       url: "https://github.com/munalgar/scribe",
       featured: false,
     },
     {
-      title: "macro-calc",
-      description:
-        "Personalized macronutrient calculator helping users achieve their health and fitness goals",
-      tech: ["JavaScript", "React"],
+      title: "Macro-Calc",
+      description: "Personalized macronutrient calculator web app",
+      tech: ["Next.js", "JavaScript", "Framer Motion"],
       url: "https://github.com/munalgar/macro-calc",
       featured: false,
     },
   ];
 
   const skills = [
-    { name: "Python", category: "Language", level: "Advanced" },
+    { name: "Python", category: "Language", level: "Intermediate" },
     { name: "TypeScript", category: "Language", level: "Advanced" },
     { name: "JavaScript", category: "Language", level: "Advanced" },
     { name: "Java", category: "Language", level: "Beginner" },
     { name: "Kotlin", category: "Language", level: "Beginner" },
+    { name: "Dart", category: "Language", level: "Beginner" },
     { name: "Swift", category: "Language", level: "Beginner" },
-    { name: "React", category: "Framework", level: "Advanced" },
-    { name: "React Native", category: "Framework", level: "Intermediate" },
+    { name: "React", category: "Framework", level: "Intermediate" },
+    { name: "React Native", category: "Framework", level: "Beginner" },
+    { name: "FastAPI", category: "Framework", level: "Beginner" },
+    { name: "Flask", category: "Framework", level: "Beginner" },
     { name: "Next.js", category: "Framework", level: "Advanced" },
     { name: "Expo", category: "Framework", level: "Intermediate" },
     { name: "Electron", category: "Framework", level: "Intermediate" },
-    { name: "Node.js", category: "Runtime", level: "Advanced" },
-    { name: "Zustand", category: "Library", level: "Intermediate" },
-    { name: "Tailwind CSS", category: "Library", level: "Advanced" },
+    { name: "Flutter", category: "Framework", level: "Beginner" },
     { name: "AWS", category: "Cloud", level: "Intermediate" },
+    { name: "Azure", category: "Cloud", level: "Intermediate" },
+    { name: "Supabase", category: "Cloud", level: "Intermediate" },
     { name: "PostgreSQL", category: "Database", level: "Intermediate" },
     { name: "Docker", category: "DevOps", level: "Beginner" },
-    { name: "Turborepo", category: "DevOps", level: "Intermediate" },
+    { name: "Turborepo", category: "DevOps", level: "Beginner" },
+    { name: "Git", category: "DevOps", level: "Intermediate" },
+    { name: "Terraform", category: "DevOps", level: "Beginner" },
   ];
 
   const education = {
@@ -208,7 +204,7 @@ export default function Home() {
       {/* Experience Section */}
       <section
         id="experience"
-        className="relative mx-auto max-w-6xl px-6 py-24 md:px-12"
+        className="relative mx-auto max-w-6xl px-6 py-2 md:px-12"
       >
         <div className="mb-16">
           <h2 className="mb-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 md:text-5xl">
